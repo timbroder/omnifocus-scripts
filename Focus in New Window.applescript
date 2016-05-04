@@ -55,6 +55,11 @@ on main()
 		-- make new window
 		tell default document
 			make new document window with properties {perspective name:"Projects"}
+			delay 1
+			tell application "System Events"
+				keystroke "s" using command down & option down
+				keystroke "i" using command down & option down
+			end tell
 		end tell
 		
 		-- set focus
